@@ -1,0 +1,33 @@
+.form-check {
+    margin-bottom: 0.5rem;
+  }
+  .hover-shadow {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .hover-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  ::ng-deep .ngx-pagination {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+  
+  ::ng-deep .ngx-pagination li {
+    margin: 2px 5px;
+  }
+  ::ng-deep .custom-pagination .ngx-pagination {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 576px) {
+    ::ng-deep .custom-pagination .ngx-pagination {
+      font-size: 0.75rem;
+    }
+  
+    ::ng-deep .custom-pagination .ngx-pagination li {
+      margin: 2px 3px;
+    }
+  }
+  

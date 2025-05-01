@@ -1,0 +1,22 @@
+.banner {
+    background: url('https://source.unsplash.com/1600x600/?shopping,ecommerce') no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+  }
+  
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner div {
+    position: relative;
+    z-index: 1;
+  }
+  
