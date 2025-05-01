@@ -13,4 +13,9 @@ export class ApiService {
   getAllProductsAPI(){
     return this.http.get(this.api_url)
    }
+
+   getAProductAPI(id:any){
+    return this.http.get(`${this.api_url}/${id}`)
+   }
+
 }

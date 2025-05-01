@@ -45,4 +45,8 @@ onSortChange() {
     });
   }
 
+  viewProduct(id:any){
+      this.router.navigateByUrl(`${id}`);
+  }
+  
 }

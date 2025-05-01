@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-product-details',
@@ -7,6 +9,42 @@ import { Component } from '@angular/core';
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
-export class ProductDetailsComponent {
+export class ProductDetailsComponent implements OnInit {
+
+  constructor(private route:ActivatedRoute, private api:ApiService,private router:Router
+  ) {}
+
+  productId: any=''
+  product: any={}
+  relatedProducts: any=[]
+
+  ngOnInit(): void {
+    this.route.params.subscribe((res:any) => {
+      console.log(res);
+      this.productId = res.id
+      console.log(this.productId)
+      this.api.getAProductAPI(this.productId).subscribe((res: any) => {
+        console.log(res)
+        this.product = res;
+        this.relatedProduct(this.product.category)
+    })
+  })
+
+}
+
+  viewRelated(id:any){
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        this.router.navigate([id]);
+      });
+  }
+
+  relatedProduct(category:any){
+    this.api.getAllProductsAPI().subscribe((res: any) => {
+      this.relatedProducts = res.products.filter((item: any) =>
+        item.category === category && item.id != this.productId
+      );
+      console.log(this.relatedProducts)
+    });
+  }
 
 }

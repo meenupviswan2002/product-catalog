@@ -9,6 +9,37 @@
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
+
+  ::ng-deep pagination-controls .ngx-pagination li {
+    background-color: blueviolet !important; 
+    color: white !important;
+    margin: 2px;
+
+  }
+
+  ::ng-deep pagination-controls .ngx-pagination a:hover {
+    background-color: #333 !important;
+  }
+
+  
+  ::ng-deep pagination-controls .ngx-pagination a {
+    transition: background-color 0.2s ease-in-out;
+    color: white !important;
+  }
+  
+  ::ng-deep pagination-controls .ngx-pagination .current {
+    background-color: #333 !important; 
+}
+  
+  ::ng-deep pagination-controls .ngx-pagination .pagination-previous a,
+  ::ng-deep pagination-controls .ngx-pagination .pagination-next a {
+    color: white !important;
+  }
+  
+  ::ng-deep pagination-controls .ngx-pagination .disabled {
+    opacity: 0.5;
+  }
+  
   ::ng-deep .ngx-pagination {
     flex-wrap: wrap;
     justify-content: center !important;
@@ -23,11 +54,16 @@
   
   @media (max-width: 576px) {
     ::ng-deep .custom-pagination .ngx-pagination {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
     }
   
     ::ng-deep .custom-pagination .ngx-pagination li {
       margin: 2px 3px;
     }
+  }
+  
+  input::placeholder {
+    color: #ccc; 
+    opacity: 1;  
   }
   
