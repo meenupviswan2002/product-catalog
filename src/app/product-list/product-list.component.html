@@ -37,6 +37,10 @@
               <input class="form-check-input" type="radio" name="sortOption" id="ratingHigh" value="rating-desc" [(ngModel)]="selectedSortOption" (change)="onSortChange()" >
               <label class="form-check-label" for="ratingHigh">High to Low</label>
             </div>
+            <div class="form-check mt-3">
+              <input class="form-check-input" type="radio" name="sortOption" id="none" value="none" [(ngModel)]="selectedSortOption" (change)="onSortChange()" >
+              <label class="form-check-label" for="none"><strong>Show Unsorted Products</strong></label>
+            </div>
           </div>
         </div>
       </div>
