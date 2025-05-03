@@ -67,3 +67,12 @@
     opacity: 1;  
   }
   
+.form-check-input:checked {
+    background-color: blueviolet;
+    border-color: blueviolet;
+  }
+  
+  .form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25); 
+  }
+  

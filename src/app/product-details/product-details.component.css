@@ -7,3 +7,20 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
+
+  p{
+    color: whitesmoke;
+  }
+
+  .back-btn {
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: blueviolet;
+    color: white;
+  }
+  

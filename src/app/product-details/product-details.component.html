@@ -1,49 +1,81 @@
-<div class="container my-5 ">
-    <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0 text-center">
-            <img [src]="product.thumbnail"
-                 alt="Product Image"
-                 class="img-fluid rounded shadow"
-                 style="max-height: 500px; object-fit: contain; width: 80%;" />
-          </div>
-          
-      <div class="col-md-6">
-        <h2 class="fw-bold mb-3 text-primary">{{product.title}}</h2>
-        <p class="mb-3">{{product.description}}</p>
-        <p class="text-muted mb-2">Category: <span class="fw-semibold">{{product.category}}</span></p>
-        <p class="mb-1">Brand: <strong>{{product.brand}}</strong></p>
-        <h4 class="text-success fw-bold mb-2">${{product.price}} <small class="text-muted fs-6">({{product.discountPercentage}}% off)</small></h4>
-        <p class="mb-2">Stock: <strong>{{product.stock}} available</strong></p>
-        <p class="mb-1">Shipping: <strong>{{product.shippingInformation}}</strong></p>
-  <p class="mb-1">Warranty: <strong>{{product.warrantyInformation}}</strong></p>
-        <p class="mb-1">Return Policy: <strong>{{product.returnPolicy}}</strong></p>
-        <p class="mb-3">Minimum Order: <strong>{{product.minimumOrderQuantity}} units</strong></p>  
-        <p class="text-warning fw-medium mb-4">⭐ Rating: {{product.rating}} / 5</p>
-        <a href="/products"><button class="btn btn-outline-primary px-4 py-2">Back to Products</button></a>
-      </div>
+<div class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0 text-center">
+      <img
+        [src]="product.thumbnail"
+        alt="Product Image"
+        class="img-fluid rounded shadow"
+        style="max-height: 500px; object-fit: contain; width: 80%;background-color: #343a40;"
+      />
     </div>
 
-    <div class="container mb-5 pb-5">
-        <h3 class="mb-4 text-center text-secondary fw-bold">Related Products</h3>
-        <div class="row">
-          @for (item of relatedProducts; track $index) {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm border-0 hover-shadow" (click)="viewRelated(item.id)">
-                  <img [src]="item.thumbnail" 
-                       class="card-img-top" 
-                       alt="Product 1"
-                       style="height: 220px; object-fit: contain;" />
-                  <div class="card-body text-center">
-                    <h5 class="card-title fw-semibold">{{item.title}}</h5>
-                    <p class="card-text text-success">${{item.price}}</p>
-                    <p class="card-text small text-muted">⭐ Rating: {{item.rating}} / 5</p>
-                  </div>
-                </div>
-              </div>
-          }
-      
+    <div class="col-md-6">
+      <h2 class="fw-bold mb-3" style="color: blueviolet;font-size: 2.5rem;">{{ product.title }}</h2>
+      <p class="mb-3">{{ product.description }}</p>
+      <p class="text-white mb-2">
+        Category: <span class="fw-semibold">{{ product.category }}</span>
+      </p>
+      <p class="mb-1">
+        Brand: <strong>{{ product.brand }}</strong>
+      </p>
+      <h4 class="text-success fw-bold mb-2" style="font-size: 2rem;">
+        ${{ product.price }}
+        <small class="text-white fs-6"
+          >({{ product.discountPercentage }}% off)</small
+        >
+      </h4>
+      <p class="mb-2">
+        Stock: <strong>{{ product.stock }} available</strong>
+      </p>
+      <p class="mb-1">
+        Shipping: <strong>{{ product.shippingInformation }}</strong>
+      </p>
+      <p class="mb-1">
+        Warranty: <strong>{{ product.warrantyInformation }}</strong>
+      </p>
+      <p class="mb-1">
+        Return Policy: <strong>{{ product.returnPolicy }}</strong>
+      </p>
+      <p class="mb-3">
+        Minimum Order: <strong>{{ product.minimumOrderQuantity }} units</strong>
+      </p>
+      <p class="text-warning fw-medium mb-4">
+        ⭐ Rating: {{ product.rating }} / 5
+      </p>
+      <a href="/products"
+        ><button class="btn back-btn px-4 py-2">
+          Back to Products
+        </button></a
+      >
+    </div>
+  </div>
+
+  <div class="container my-5 pb-5">
+    <h3 class="mb-4 text-secondary fw-bold fs-2">Related Products</h3>
+    <div class="row">
+      @for (item of relatedProducts; track $index) {
+      <div class="col-md-4 mb-4">
+        <div
+          class="card h-100 shadow-sm border-0 hover-shadow"
+          style="background-color: #343a40;"
+          (click)="viewRelated(item.id)"
+        >
+          <img
+            [src]="item.thumbnail"
+            class="card-img-top"
+            alt="Product 1"
+            style="height: 220px; object-fit: contain"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title fw-semibold text-white">{{ item.title }}</h5>
+            <p class="card-text text-white fs-4">Price: <span class="text-success">${{ item.price }}</span></p>
+            <p class="card-text small text-warning fs-6">
+              ⭐ Rating: {{ item.rating }} / 5
+            </p>
+          </div>
         </div>
       </div>
-      
+      }
+    </div>
   </div>
-  
+</div>
