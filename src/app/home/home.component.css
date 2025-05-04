@@ -1,22 +1,22 @@
 .banner {
-    background: url('https://img.freepik.com/premium-photo/free-photo-shopping-cart-full-products-inside-supermarket_1041666-7156.jpg') no-repeat center center;
-    background-size: cover;
-    height: 60vh;
-    position: relative;
-  }
-  
-  .banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .banner div {
-    position: relative;
-    z-index: 1;
-  }
-  
+  background: url("https://img.freepik.com/premium-photo/free-photo-shopping-cart-full-products-inside-supermarket_1041666-7156.jpg")
+    no-repeat center center;
+  background-size: cover;
+  height: 60vh;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner div {
+  position: relative;
+  z-index: 1;
+}

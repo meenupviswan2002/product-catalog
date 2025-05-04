@@ -1,78 +1,77 @@
 .form-check {
-    margin-bottom: 0.5rem;
-  }
-  .hover-shadow {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  
-  .hover-shadow:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  ::ng-deep pagination-controls .ngx-pagination li {
-    background-color: blueviolet !important; 
-    color: white !important;
-    margin: 2px;
-
-  }
-
-  ::ng-deep pagination-controls .ngx-pagination a:hover {
-    background-color: #333 !important;
-  }
-
-  
-  ::ng-deep pagination-controls .ngx-pagination a {
-    transition: background-color 0.2s ease-in-out;
-    color: white !important;
-  }
-  
-  ::ng-deep pagination-controls .ngx-pagination .current {
-    background-color: #333 !important; 
+  margin-bottom: 0.5rem;
 }
-  
-  ::ng-deep pagination-controls .ngx-pagination .pagination-previous a,
-  ::ng-deep pagination-controls .ngx-pagination .pagination-next a {
-    color: white !important;
-  }
-  
-  ::ng-deep pagination-controls .ngx-pagination .disabled {
-    opacity: 0.5;
-  }
-  
-  ::ng-deep .ngx-pagination {
-    flex-wrap: wrap;
-    justify-content: center !important;
-  }
-  
-  ::ng-deep .ngx-pagination li {
-    margin: 2px 5px;
-  }
+.hover-shadow {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hover-shadow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* pagination styling */
+::ng-deep pagination-controls .ngx-pagination li {
+  background-color: blueviolet !important;
+  color: white !important;
+  margin: 2px;
+}
+
+::ng-deep pagination-controls .ngx-pagination a:hover {
+  background-color: #333 !important;
+}
+
+::ng-deep pagination-controls .ngx-pagination a {
+  transition: background-color 0.2s ease-in-out;
+  color: white !important;
+}
+
+::ng-deep pagination-controls .ngx-pagination .current {
+  background-color: #333 !important;
+}
+
+::ng-deep pagination-controls .ngx-pagination .pagination-previous a,
+::ng-deep pagination-controls .ngx-pagination .pagination-next a {
+  color: white !important;
+}
+
+::ng-deep pagination-controls .ngx-pagination .disabled {
+  opacity: 0.5;
+}
+
+::ng-deep .ngx-pagination {
+  flex-wrap: wrap;
+  justify-content: center !important;
+}
+
+::ng-deep .ngx-pagination li {
+  margin: 2px 5px;
+}
+::ng-deep .custom-pagination .ngx-pagination {
+  font-size: 1rem;
+}
+
+/* responsiveness for pagination */
+@media (max-width: 576px) {
   ::ng-deep .custom-pagination .ngx-pagination {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
-  
-  @media (max-width: 576px) {
-    ::ng-deep .custom-pagination .ngx-pagination {
-      font-size: 0.8rem;
-    }
-  
-    ::ng-deep .custom-pagination .ngx-pagination li {
-      margin: 2px 3px;
-    }
+
+  ::ng-deep .custom-pagination .ngx-pagination li {
+    margin: 2px 3px;
   }
-  
-  input::placeholder {
-    color: #ccc; 
-    opacity: 1;  
-  }
-  
+}
+
+input::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
 .form-check-input:checked {
-    background-color: blueviolet;
-    border-color: blueviolet;
-  }
-  
-  .form-check-input:focus {
-    box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25); 
-  }
-  
+  background-color: blueviolet;
+  border-color: blueviolet;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25);
+}

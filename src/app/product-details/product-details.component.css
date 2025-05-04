@@ -1,26 +1,25 @@
 .hover-shadow {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  
-  .hover-shadow:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
 
-  p{
-    color: whitesmoke;
-  }
+.hover-shadow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
 
-  .back-btn {
-    border: 1px solid blueviolet;
-    color: blueviolet;
-    background-color: transparent;
-    transition: all 0.3s ease;
-  }
-  
-  .back-btn:hover {
-    background-color: blueviolet;
-    color: white;
-  }
-  
+p {
+  color: whitesmoke;
+}
+
+.back-btn {
+  border: 1px solid blueviolet;
+  color: blueviolet;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: blueviolet;
+  color: white;
+}
